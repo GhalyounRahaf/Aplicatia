@@ -1,0 +1,107 @@
+.popularbooks{
+    border-bottom: 1px solid var(--color-dark-Ex);
+    padding-bottom: 56px;   
+}
+.filter-buttons{
+    margin-top: -140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 66px;
+}
+.filter-buttons button{
+    font-size: 16px;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    transition: var(--transition);
+    padding-bottom: 6px;
+    border-bottom: 3px solid transparent;
+}
+.filter-buttons button:hover{
+    color: var(--color-black);
+}
+.filter-buttons .active{
+    border-bottom: 3px solid var(--color-primary);
+    color: var(--color-primary);   
+}
+.gallery{
+    padding: 30px;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+.gallery-item{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    animation: GAni forwards 400ms ease;
+}
+.add-to-cart {
+    /* position: absolute; */
+    background: #5a5757;
+    color: #fff;
+    width: 100%;
+    font-size: 18px;
+    /* margin: 0; */
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2.5;
+    /* bottom: 300px;
+    bottom: 160px; */
+    /* left: 0;
+    bottom: 0;
+    z-index: 9; */
+    transition: 0.3s ease-out;
+ 
+}
+button.add-to-cart:hover {
+
+    background-color: white;
+    color: black;
+}
+
+@keyframes GAni {
+    from{
+        transform: scale(0);
+    }  
+    to{
+        transform: scale(1);
+    }  
+}
+/* .popularbook-image{
+    background: var(--color-light);
+    object-fit: cover;
+    height: 100%;
+    
+} */
+.gallery-item img{
+max-height: 360px;    
+}
+.popularbook-info>div{
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.popularbook-info h4,h5 {
+   color:rgb(56, 54, 54);
+}
+
+/* ....................Max-width:1024px...................... */
+@media (max-width:1024px) {
+    .gallery{
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+}
+/* ....................Max-width:500px...................... */
+@media (max-width:500px) {
+    .gallery{
+        grid-template-columns: repeat(1,1fr);   
+    }
+    .popularbook-info>div{       
+        margin-bottom: 10px;
+    }
+}

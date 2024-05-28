@@ -1,0 +1,54 @@
+footer {
+  padding-top: 50px;  /* Adjusted for better spacing */
+  background: var(--color-bg-2);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;  /* Center items horizontally */
+  flex-wrap: wrap;  /* Allow wrapping to the next line if necessary */
+  gap: 40px;  /* Space between columns */
+}
+
+.footer-container > div {
+  flex: 1 1 200px;  /* Allow each column to grow and shrink, setting a base width */
+  text-align: center;  /* Center text within each column */
+  margin-bottom: 20px;  /* Space between rows in mobile view */
+}
+
+.footer-container h4 {
+  margin-bottom: 22px;
+  font-weight: bold;
+}
+
+.param-links {
+  list-style-type: none;  /* Remove default bullets */
+  padding: 0;  /* Remove default padding */
+  margin: 0;  /* Remove default margin */
+}
+
+.param-links li {
+  margin-top: 10px;
+}
+
+.param-links li a {
+  color: var(--color-dark);
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: var(--transition);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.param-links li a:hover {
+  color: var(--color-primary);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 20px;  /* Adjust gap for smaller screens */
+  }
+}
+
+
